@@ -8,6 +8,9 @@ const { pwa, primaryColor } = defaultSettings; // preview.pro.ant.design only do
 
 const { ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION } = process.env;
 const isAntDesignProPreview = ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION === 'site';
+
+
+
 const plugins: IPlugin[] = [
   [
     'umi-plugin-react',
@@ -53,6 +56,9 @@ const plugins: IPlugin[] = [
       autoAddMenu: true,
     },
   ],
+  [
+    'umi-plugin-gh-pages',{}
+  ],
 ]; // 针对 preview.pro.ant.design 的 GA 统计代码
 
 if (isAntDesignProPreview) {
@@ -69,8 +75,9 @@ if (isAntDesignProPreview) {
     },
   ]);
 }
-
 export default {
+  base: '/web/',
+  publicPath: '/web/',
   plugins,
   block: {
     // 国内用户可以使用码云
