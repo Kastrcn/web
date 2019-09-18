@@ -2,6 +2,12 @@
 
 This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
 
+
+
+## view page
+
+[view page](https://kastrcn.github.io/web/) 
+
 ## Environment Prepare
 
 Install `node_modules`:
@@ -46,6 +52,7 @@ You can also use script to auto fix some lint error:
 npm run lint:fix
 ```
 
+g
 ### Test code
 
 ```bash
